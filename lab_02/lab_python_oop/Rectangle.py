@@ -17,9 +17,10 @@ class Rectangle(Figure):
         return self.width * self.height
 
     def __repr__(self):
-        return 'Rectangle width = {}, height = {}, color = {}'.format(
+        return 'Rectangle width = {}, height = {}, color = {}, square = {}'.format(
             self.width,
             self.height,
-            self.color.color
+            self.color.color,
+            self.square()
         )
 

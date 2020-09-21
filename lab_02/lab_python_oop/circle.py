@@ -15,10 +15,11 @@ class Circle(Figure):
         return cls.TYPE
 
     def square(self):
-        return r * r * math.pi
+        return self.radius * self.radius * math.pi
 
     def __repr__(self):
-        return 'Circle radius = {}, color = {}'.format(
+        return 'Circle radius = {}, color = {}, square = {}'.format(
             self.radius,
-            self.color.color
+            self.color.color,
+            self.square()
         )

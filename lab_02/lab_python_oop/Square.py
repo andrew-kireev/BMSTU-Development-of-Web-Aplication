@@ -17,7 +17,8 @@ class Square(Figure):
         return self.side * self.side
 
     def __repr__(self):
-        return 'Square side = {}, color = {}'.format(
+        return 'Square side = {}, color = {}, square = {}'.format(
             self.side,
-            self.color.color
+            self.color.color,
+            self.square()
         )
