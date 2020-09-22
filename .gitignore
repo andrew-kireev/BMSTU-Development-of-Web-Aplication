@@ -34,6 +34,9 @@ MANIFEST
 *.spec
 
 # Installer logs
+
+#Binary files
+.DS_Store
 pip-log.txt
 pip-delete-this-directory.txt
 
