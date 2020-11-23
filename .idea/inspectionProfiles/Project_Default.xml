@@ -1,0 +1,17 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="django_fr_prj.core.views.HttpResponce" />
+          <option value="django_fr_prj.django_fr_prj.urls.*" />
+          <option value="app.views" />
+          <option value="app.models" />
+          <option value="askme.app.management.commands.filldb.app" />
+          <option value="askme.app.management.commands.filldb.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
