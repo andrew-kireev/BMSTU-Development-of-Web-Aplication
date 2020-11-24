@@ -34,13 +34,6 @@ class SingletonTests(unittest.TestCase):
 
         self.assertEqual(requsts, db_singleton.select('requst'))
 
+
 if __name__ == '__main__':
     unittest.main()
-    # db_singleton_1 = Database()
-    # print(db_singleton_1)
-    # db_singleton_2 = Database()
-    # print(db_singleton_2)
-    #
-    # db_singleton_1.insert('INSERT INTO table1 2')
-    # db_singleton_2.connect()
-    # db_singleton_1.insert('INSERT INTO table1 2')

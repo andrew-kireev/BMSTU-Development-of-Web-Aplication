@@ -5,11 +5,6 @@ from termcolor import colored
 # Поведенческий шаблон Наблюдатель
 
 
-def start_working(window):
-    window.is_ready_ = False
-    sleep(window.time_for_sleeping_)
-    window.is_ready_ = True
-
 class InformationBoard:
     def __init__(self):
         self.objects = list()

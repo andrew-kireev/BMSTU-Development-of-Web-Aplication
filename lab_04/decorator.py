@@ -9,6 +9,7 @@ class Notification:
     def send_notification(self):
         print('Уведомление: ' + self.notification)
         print('Отправлена на почту: ' + self.email)
+        return 'Отправлена на почту: ' + self.email
 
 
 class SendToWhatsUp:
@@ -19,6 +20,7 @@ class SendToWhatsUp:
     def send_notification(self):
         self.notifaer.send_notification()
         print('Отправлена на WhatsUp: ' + self.whatsup_nickname)
+        return 'Отправлена на WhatsUp: ' + self.whatsup_nickname
 
 
 class SendToTelegram:
@@ -29,6 +31,7 @@ class SendToTelegram:
     def send_notification(self):
         self.notifaer.send_notification()
         print('Отправлена на Telegram: ' + self.telegram_nickname)
+        return 'Отправлена на Telegram: ' + self.telegram_nickname
 
 
 class SendToVK:
@@ -39,6 +42,7 @@ class SendToVK:
     def send_notification(self):
         self.notifaer.send_notification()
         print('Отправлена в Vk: ' + self.Vk_nickname)
+        return 'Отправлена в Vk: ' + self.Vk_nickname
 
 
 class SendToSlack:
@@ -49,6 +53,7 @@ class SendToSlack:
     def send_notification(self):
         self.notifaer.send_notification()
         print('Отправлена на Slack: ' + self.slack_nickname)
+        return 'Отправлена на Slack: ' + self.slack_nickname
 
 
 class Client:
