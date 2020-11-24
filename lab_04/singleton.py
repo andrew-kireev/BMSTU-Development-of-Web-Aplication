@@ -12,13 +12,18 @@ class MetaSingleton(type):
 
 
 class DbConnection:
+    DB = list()
+
     def select(self, request):
         print('Произведен такой запрос к базе данных:' + request)
         print('Получены какие-то данные...')
+        print(self.DB)
+        return self.DB
 
     def insert(self, request):
+        self.DB.append(request)
         print('Произведен такой запрос к базе данных:' + request)
-        print('В BD вставлены такие-то данные...')
+        print('Данные:' + ' В BD вставлены такие-то данные...')
 
 
 class Database(metaclass=MetaSingleton):
@@ -28,20 +33,25 @@ class Database(metaclass=MetaSingleton):
         if self.connection is None:
             self.connection = DbConnection()
             print('Соединение BD установленно')
+            return True
         else:
             print('Соединение с BD уже установленно')
+            return False
 
     def select(self, request):
         if self.connection is not None:
-            self.connection.select(request)
+            return self.connection.select(request)
         else:
             print('Соединение с базой данных отсутствует')
+            return False
 
     def insert(self, request):
         if self.connection is not None:
             self.connection.insert(request)
+            return True
         else:
             print('Соединение с базой данных отсутствует')
+            return False
 
 
 if __name__ == '__main__':
